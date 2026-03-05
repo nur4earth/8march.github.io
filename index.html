@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI Scanner</title>
+
+<style>
+body{
+background:black;
+color:#00ff9f;
+font-family:monospace;
+font-size:24px;
+padding:40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="text"></div>
+
+<script>
+
+let lines = [
+"Initializing AI...",
+"Scanning student...",
+"Student detected",
+"Name: *****",
+"",
+"Processing data...",
+"",
+"🌸 8 Наурыз құтты болсын!",
+"— Дастан ағай"
+];
+
+let i = 0;
+
+function showLine(){
+if(i < lines.length){
+document.getElementById("text").innerHTML += lines[i] + "<br>";
+i++;
+setTimeout(showLine,1000);
+}
+}
+
+showLine();
+
+</script>
+
+</body>
+</html>
