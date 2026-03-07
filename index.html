@@ -1434,15 +1434,29 @@ setTimeout(()=>{
     greeting.classList.add("show");
 },5000);
 
-setTimeout(()=>{
-    line2.innerText = `💐 ${name}, көктемдей құлпырып жүре бер! 💐`;
-    line2.classList.add("show");
-},6500);
 
-setTimeout(()=>{
-    from.innerText = "— Дастан ағай";
+
+setTimeout(() => {
+    line2.innerText = `💐 ${name}, ${name === "Мөлдір Жише" ? "құлпырып жүре беріңіз!" : "көктемдей құлпырып жүре бер!"} 💐`;
+    line2.classList.add("show");
+}, 6500);
+
+setTimeout(() => {
+    from.innerText = name === "Мөлдір Жише" ? "— Дастан қайын ініңізден" : "— Дастан ағай";
     from.classList.add("show");
-},8000);
+}, 8000);
+
+// setTimeout(()=>{
+//     line2.innerText = `💐 ${name}, көктемдей құлпырып жүре бер! 💐`;
+//     line2.classList.add("show");
+// },6500);
+
+// setTimeout(()=>{
+//     from.innerText = "— Дастан ағай";
+//     from.classList.add("show");
+// },8000);
+
+	
 	
     </script>
 </body>
